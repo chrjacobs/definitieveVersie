@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3-dec-2014 14:02:55 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="schooldb" name="dal.Module" optimistic-lock="version" table="tbl_module">
+    <id name="id" type="java.lang.Integer">
+      <column name="ID"/>
+      <generator class="identity"/>
+    </id>
+    <property name="naam" type="string">
+      <column length="250" name="Naam" not-null="true"/>
+    </property>
+    <property name="omschrijving" type="string">
+      <column length="250" name="Omschrijving" not-null="true"/>
+    </property>
+    <property name="aantalUren" type="int">
+      <column name="AantalUren" not-null="true"/>
+    </property>
+    <property name="startdatum" type="date">
+      <column length="10" name="Startdatum" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
